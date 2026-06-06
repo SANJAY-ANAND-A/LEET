@@ -19,6 +19,10 @@ public:
         {
             res[i] = std::abs(lSum[i]-rSum[i]);
         }
+        rSum.clear();
+        rSum.shrink_to_fit();
+        lSum.clear();
+        lSum.shrink_to_fit();
         return res;
     }
 };
