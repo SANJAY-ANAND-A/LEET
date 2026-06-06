@@ -12,8 +12,7 @@ public:
         {
             sum -= nums[i];
             lSum[i]=std::abs(lSum[i]-sum);
-        }
-        
+        }  
         return lSum;
     }
 };
