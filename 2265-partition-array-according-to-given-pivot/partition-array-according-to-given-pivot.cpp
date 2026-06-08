@@ -17,7 +17,7 @@ public:
             else
             {
                 greater.push_back(nums[i]);
-             }
+            }
         }
         for(int k = 0 ; k < eq ; k++)
         {
