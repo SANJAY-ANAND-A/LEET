@@ -5,5 +5,5 @@ public:
         int mn = *min_element(nums.begin(), nums.end());
         long long diff = (long long)mx - mn;
         return diff * k;
-    }
+     }
 };
