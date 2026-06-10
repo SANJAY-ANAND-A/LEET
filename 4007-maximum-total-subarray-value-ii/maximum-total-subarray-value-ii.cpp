@@ -1,3 +1,6 @@
+//copilot failed many times , 
+//this code is pasted from chat gpt
+
 class SparseTableRMQ {
 public:
     int n, maxLog;
