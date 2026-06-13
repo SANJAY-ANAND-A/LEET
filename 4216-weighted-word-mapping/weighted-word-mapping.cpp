@@ -8,7 +8,7 @@ public:
                 sum += weights[c - 'a'];
             }
             int mod = sum % 26;
-            char mapped = 'z' - mod;  // reverse alphabetical mapping
+            char mapped = 'z' - mod;
             result.push_back(mapped);
         }
         return result;
