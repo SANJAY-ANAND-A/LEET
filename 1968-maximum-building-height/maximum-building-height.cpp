@@ -21,4 +21,4 @@ public:
         maxHt = max(maxHt, restrictions.back()[1] + (n - restrictions.back()[0]));
         return maxHt;
     }
-};
+} ;
