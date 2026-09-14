@@ -29,4 +29,5 @@ long long getArea(int l ,int i, int j)
         }
         return area;
     }
+    
 };
