@@ -9,12 +9,11 @@ public:
         {
         for(int j =i+1;j<n-2;j++)
         {
-            long long newSum = nums[i]+nums[j];
             int left = j+1;
             int right =n-1;
             while(left<right)
             {
-                long long sum = newSum + nums[left]+nums[right];
+                long long sum = (long long)nums[i]+nums[j] + nums[left]+nums[right];
                 if(sum == target )
                 {
                     set.insert({nums[i],nums[j],nums[left],nums[right]});
