@@ -1,12 +1,20 @@
 class Solution {
 public:
     vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
-        vector<bool> res;
-        auto max_idx = std::max_element(candies.begin(),candies.end());
-        for(int totCan : candies)
+        int n = candies.size();
+        int e = extraCandies;
+        int max =-1;
+        for(auto a : candies)
         {
-            res.push_back((totCan + extraCandies) >= *max_idx );
+            if(a>max) max = a;
         }
-        return res;
+        vector<bool> ans(n);
+        int i = 0;
+        for(auto a:candies)
+        {
+            if(a+e >= max) ans[i]=true;
+             i++;
+        }
+        return ans;
     }
 };
