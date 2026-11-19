@@ -1,19 +1,23 @@
 class Solution {
 public:
     string reverseVowels(string s) {
-        string vowel = "";
-        for(char a : s) {
-            char c = std::tolower(a); 
-            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u') {
-                vowel += a;
+        stack<char> st;
+        for(char a:s)
+        {
+            if(a =='a'|| a=='e'|| a=='i' || a=='o' || a=='u'||a =='A'|| a=='E'|| a=='I' || a=='O' || a=='U')
+            {
+                st.push(a);
             }
         }
-        int size = vowel.length()-1;
-        for(int i = 0 ; i < s.length() ; i++) {
-            char c = std::tolower(s[i]); 
-            if(c=='a'||c=='e'||c=='i'||c=='o'||c=='u') {
-                s[i] = vowel[size--];
+        for(int i = 0 ; i < s.length() ; i++)
+        {
+            char a = s[i];
+            if( a=='a'|| a=='e'|| a=='i' || a=='o' || a=='u'||a =='A'|| a=='E'|| a=='I' || a=='O' || a=='U')
+            {
+                s[i]=st.top();
+                st.pop();
             }
+            
         }
         return s;
     }
